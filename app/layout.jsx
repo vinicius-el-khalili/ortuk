@@ -1,7 +1,7 @@
-import Nav from '@/components/Nav'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='h-screen grid grid-rows-[auto_1fr_auto]'>
 
-        <Nav/>
+        <Navbar/>
         {children}
         <Footer/>
         

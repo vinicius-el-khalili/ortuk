@@ -1,0 +1,27 @@
+.Navbar {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px;
+    padding-right: 18px;
+
+    .icon {
+
+        position: absolute;
+        left: 18px;
+        display: flex;
+        gap:3px;
+        font-weight: bold;
+
+        h1 {
+            
+            @media screen and (max-width:640px) {
+                display: none;
+            }
+        
+        }
+
+    }
+
+}
