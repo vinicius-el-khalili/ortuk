@@ -1,4 +1,4 @@
-import Feed from "@/components/Feed";
+import Feed from "@/components/Feed/Feed"
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
           Ortuk
         </h1>
         <p className="p-4 text-center">
-          A simple CRUD project with Next.js
+          The best CRUD project ever.
         </p>
         <Feed/>
       </main>
