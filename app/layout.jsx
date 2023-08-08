@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
       <body className='h-screen grid grid-rows-[1fr_auto]'>
 
         <Navbar/>
-        {children}
+        <div>
+          {children}
+        </div>
         <Footer/>
         
       </body>
