@@ -46,17 +46,17 @@ const Navbar = () => {
             <>
 
             <Link href="/">
-            <button className={style.navButtonDark}>
+            <button className={style.navButtonDark} onClick={()=>{setToggleMenu(false)}}>
                 Create post
             </button>
             </Link>
             
-            <button className={style.navButtonLight} onClick={()=>{}}>
+            <button className={style.navButtonLight} onClick={()=>{setToggleMenu(false)}}>
                 Sign out
             </button>
 
             <Link href="/">
-            <div className={style.profile}>
+            <div className={style.profile} onClick={()=>{setToggleMenu(false)}}>
                 <Image
                  src={"/assets/images/user.png"}
                  fill
