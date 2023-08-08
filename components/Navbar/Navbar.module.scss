@@ -1,27 +1,131 @@
 .Navbar {
 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 16px;
     padding: 12px;
     padding-right: 18px;
+    transition: .4s;
+    z-index: 1;
 
     .icon {
-
+        
         position: absolute;
         left: 16px;
+        top: 14px;
         display: flex;
         gap:3px;
         font-weight: bold;
-
-        h1 {
-            
-            @media screen and (max-width:640px) {
-                display: none;
-            }
+        transition: 0;
         
-        }
-
     }
 
+    @mixin navButton {
+        font-size: 14px;
+        background-color: white;
+        color: black;
+        padding: 4px 12px 4px 12px;
+        border-radius: 18px;
+        cursor: pointer;
+        border: 1px solid black;
+        &:hover{
+            background-color: lightblue;
+            color: black;
+        }
+    }
+
+    .navButtonLight {
+        @include navButton;
+    }
+
+    .navButtonDark {
+        @include navButton;
+        background-color: #151515;
+        color: white;
+    }
+
+    .profile {
+        border-radius: 100%;
+        border: 1px solid #656565;
+        width: 37px;
+        height: 37px;
+        position: relative;
+        background-color: white;
+    }
+
+    @media screen and (max-width:768px) {
+        .navButtonDark{display: none;}
+        .navButtonLight{display: none;}
+        .profile{display: none;}
+    }
+
+    .burger {
+        position: absolute;
+        right: 12px;
+        top: 6px;
+        width: 37px;
+        height: 37px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        div{
+            background-color: black;
+            width: 30px;
+            height: 2px;
+            transition: .5s;
+        }
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+    }
+
+    .burgerOn{
+        div{
+            &:nth-child(1){
+                position: absolute;
+                background-color: red;
+                transform: rotate(-135deg);
+            }
+            &:nth-child(2){
+                background-color: transparent;
+            }
+            &:nth-child(3){
+                position: absolute;
+                transform: rotate(135deg);
+                background-color: green;
+            }
+        }
+    }
+
+}
+
+
+.on{
+    @media screen and (max-width:768px) {
+        position: absolute;
+        background-color: #ffffff99;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        .profile{
+            display: block;
+            width: 150px;
+            height: 150px;
+        }
+        .navButtonDark{display: block;}
+        .navButtonLight{display: block;}
+        
+    }
 }

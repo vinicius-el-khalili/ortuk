@@ -5,7 +5,7 @@ const Footer = () => {
         <>
         
         <footer className={style.Footer}>
-            Footer
+            footer
         </footer>
         
         </>
